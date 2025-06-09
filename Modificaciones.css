@@ -1,254 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
 
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
-        button{
-            font-family: cursive;
+button {
+    font-family: cursive;
+}
 
-        }
-        h3{
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
+h3 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-        .form-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.form-group {
+    margin-bottom: 20px;
+}
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9rem;
+}
 
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-        input:focus, select:focus {
-            outline: none;
-            border-color: #dbd0c7;
-        }
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #dbd0c7;
+}
 
-        .payment-options {
-            border: 2px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
+.payment-options {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
 
-        .radio-group {
-            margin-bottom: 15px;
-        }
+.radio-group {
+    margin-bottom: 15px;
+}
 
-        .radio-group input[type="radio"] {
-            width: auto;
-            margin-right: 10px;
-        }
+.radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
 
-        .combo-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 15px;
-        }
+.combo-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
 
-        .calendar-container {
-            background-color: rgb(243, 242, 242);
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-        }
+.calendar-container {
+    background-color: rgb(243, 242, 242);
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
 
-        .calendar {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-            margin-top: 15px;
-        }
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-top: 15px;
+}
 
-        .calendar-header {
-            text-align: center;
-            font-weight: bold;
-            padding: 10px;
-            background-color: #49624a;
-            color: white;
-        }
+.calendar-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 4px;
+    background-color: #49624a;
+    color: white;
+    font-size: 0.8rem;
+}
 
-        .calendar-day {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.calendar-day {
+    text-align: center;
+    padding: 8px 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.8rem;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .calendar-day:hover {
-            background-color: #d8b2a4;
-        }
+.calendar-day:hover {
+    background-color: #d8b2a4;
+}
 
-        .calendar-day.selected {
-            background-color: #b3b9a9;
-            color: white;
-        }
+.calendar-day.selected {
+    background-color: #b3b9a9;
+    color: white;
+}
 
-        .calendar-day.other-month {
-            color: #ccc;
-        }
+.calendar-day.other-month {
+    color: #ccc;
+}
 
-        .calendar-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
-        .calendar-controls button {
-            background-color: #277685;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.calendar-controls button {
+    background-color: #277685;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
 
-        .calendar-controls button:hover {
-            background-color: #88bedb;
-        }
+.calendar-controls button:hover {
+    background-color: #88bedb;
+}
 
-        .calculate-btn {
-            background-color: #35648d;
-            color: rgb(27, 21, 21);
-            padding: 15px 20px;
-            border: 3px solid rgb(229, 210, 111);
-            border-radius: 15px;
-            font-size: 22px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            cursor: pointer;
-            display: block;
-            margin: 10px auto;
-        }
+.calculate-btn {
+    background-color: #35648d;
+    color: rgb(27, 21, 21);
+    padding: 15px 20px;
+    border: 3px solid rgb(229, 210, 111);
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 300px;
+}
 
-        .calculate-btn:hover {
-            background-color: #49d5ea;
-            color: black;
-           
-        }
+.calculate-btn:hover {
+    background-color: #49d5ea;
+    color: black;
+}
 
-        .results-section {
-            margin-top: 30px;
-        }
+.results-section {
+    margin-top: 30px;
+}
 
-        .loan-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
+.loan-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
 
-        .info-box {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid #ddd;
-        }
+.info-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
 
-        .details-box {
-            background-color: #e3f2fd;
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid #2196F3;
-        }
+.details-box {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #2196F3;
+}
 
-        .details-box h3 {
-            color: #1976D2;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.details-box h3 {
+    color: #1976D2;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
-        .detail-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding: 5px 0;
-            border-bottom: 1px solid #ccc;
-        }
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
 
-        .payment-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
 
-        .payment-table th {
-            background-color: #2196F3;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-        }
+.payment-table th {
+    background-color: #2196F3;
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
 
-        .payment-table td {
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
+.payment-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
-        .payment-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
+.payment-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
-        .payment-table tr:hover {
-            background-color: #e3f2fd;
-        }
+.payment-table tr:hover {
+    background-color: #e3f2fd;
+}
 
-        .payment-column {
-            background-color: #fff3cd !important;
-            font-weight: bold;
-        }
+.payment-column {
+    background-color: #fff3cd !important;
+    font-weight: bold;
+}
 
-        .hidden {
-            display: none;
-        }
+.hidden {
+    display: none;
+}
 
-        .month-input, .day-options {
-            margin-top: 15px;
-        }
+.month-input,
+.day-options {
+    margin-top: 15px;
+}
+
+/* Responsive Design - Tablets */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .loan-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .combo-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .payment-table {
+        font-size: 0.8rem;
+    }
+
+    .payment-table th,
+    .payment-table td {
+        padding: 8px 4px;
+    }
+
+    .calendar-container {
+        padding: 15px;
+    }
+
+    .payment-options {
+        padding: 15px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input,
+    select {
+        padding: 10px;
+        font-size: 16px;
+        /* Prevent zoom on iOS */
+    }
+
+    .payment-options {
+        padding: 10px;
+    }
+
+    .calendar-container {
+        padding: 10px;
+    }
+
+    .calendar-header {
+        padding: 6px 2px;
+        font-size: 0.7rem;
+    }
+
+    .calendar-day {
+        padding: 6px 2px;
+        font-size: 0.7rem;
+        min-height: 30px;
+    }
+
+    .calendar-controls button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .calculate-btn {
+        font-size: 1.1rem;
+        padding: 12px 15px;
+    }
+
+    .info-box,
+    .details-box {
+        padding: 15px;
+    }
+
+    .payment-table {
+        font-size: 0.7rem;
+    }
+
+    .payment-table th,
+    .payment-table td {
+        padding: 6px 2px;
+    }
+
+    /* Make table scrollable horizontally on very small screens */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .payment-table {
+        min-width: 600px;
+    }
+
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .detail-item span:last-child {
+        font-weight: bold;
+        color: #1976D2;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .calendar-header,
+    .calendar-day {
+        font-size: 0.6rem;
+    }
+
+    .payment-table {
+        font-size: 0.65rem;
+    }
+
+    .calculate-btn {
+        font-size: 1rem;
+    }
+}
